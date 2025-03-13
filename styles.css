@@ -1,0 +1,120 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+#playground {
+  width: 800px;
+  height: 800px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cube {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: move;
+  user-select: none;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cube1 {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+  left: 100px;
+  top: 100px;
+}
+
+#cube2 {
+  background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+  left: 200px;
+  top: 200px;
+}
+
+.selected {
+  border: 2px solid #ffd700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  transform: scale(1.05);
+}
+
+#controls {
+  margin: 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 180px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 12px 20px;
+  margin: 0;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#separateBtn {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+  margin-top: 10px;
+}
+
+#separateBtn:hover {
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+/* Стили для кнопок цветов */
+button[onclick*='red'] {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+}
+
+button[onclick*='green'] {
+  background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+}
+
+button[onclick*='blue'] {
+  background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+}

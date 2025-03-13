@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Интерактивные кубики</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<div id="playground">
+			<div id="cube1" class="cube"></div>
+			<div id="cube2" class="cube"></div>
+		</div>
+		<div id="controls">
+			<button onclick="changeColor('red')">Красный</button>
+			<button onclick="changeColor('green')">Зеленый</button>
+			<button onclick="changeColor('blue')">Синий</button>
+			<button id="separateBtn" onclick="separateCubes()">Разъединить</button>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
